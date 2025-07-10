@@ -56,6 +56,8 @@ export default function Home() {
     setLoading(false);
   }
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center py-10 px-2 bg-[#0D2A5B]">
       <h1 className="title">OCS Exam Maker</h1>
@@ -74,6 +76,7 @@ export default function Home() {
           </>
         )}
       </div>
+      <div className="text-white mt-10">&copy; Rammne | {currentYear}</div>
     </div>
   );
 }
