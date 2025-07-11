@@ -61,7 +61,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center py-10 px-2 bg-[#0D2A5B]">
       <h1 className="title">OCS Exam Maker</h1>
-      <div className="card w-full max-w-xl min-h-[350px] flex items-center justify-center relative">
+      <div className="card w-full max-w-4xl min-h-[350px] flex items-center justify-center relative">
         {showPdfMsg && (
           <div className="absolute top-0 left-0 w-full rounded-t-lg bg-[#FFC107] text-white text-center py-3 px-4 font-semibold shadow z-10 animate-fade-in">
             Exam PDF generated successfully!
