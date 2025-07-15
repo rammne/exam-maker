@@ -1,9 +1,4 @@
 // pages/api/generate-exam.js
-
-
-
-
-
 import PDFDocument from "pdfkit";
 import { getProfessorByEmployeeID } from "../../lib/firestore";
 
@@ -29,7 +24,7 @@ export default async function handler(req, res) {
 You are an expert exam designer tasked with generating a comprehensive and well-structured college-level examination. Please generate an exam based on the following professor-provided details:
 
 • *Program*: ${data.program}
-• *Course*: ${data.course}
+• *Course Subject*: ${data.course}
 • *Year Level*: ${data.yearLevel}
 • *Semester*: ${data.semester}
 • *Period*: ${data.period}
