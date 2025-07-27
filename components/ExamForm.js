@@ -84,7 +84,7 @@ export default function ExamForm({ onSubmit, loading }) {
               onChange={handleChange}
               required
             />
-            <span className="ml-2">First Year College</span>
+            <span className="ml-2">First Year</span>
           </label>
           <label className="inline-flex items-center">
             <input
@@ -94,7 +94,7 @@ export default function ExamForm({ onSubmit, loading }) {
               checked={form.yearLevel === "Second Year College"}
               onChange={handleChange}
             />
-            <span className="ml-2">Second Year College</span>
+            <span className="ml-2">Second Year</span>
           </label>
           <label className="inline-flex items-center">
             <input
@@ -104,7 +104,7 @@ export default function ExamForm({ onSubmit, loading }) {
               checked={form.yearLevel === "Third Year College"}
               onChange={handleChange}
             />
-            <span className="ml-2">Third Year College</span>
+            <span className="ml-2">Third Year</span>
           </label>
           <label className="inline-flex items-center">
             <input
@@ -114,7 +114,7 @@ export default function ExamForm({ onSubmit, loading }) {
               checked={form.yearLevel === "Fourth Year College"}
               onChange={handleChange}
             />
-            <span className="ml-2">Fourth Year College</span>
+            <span className="ml-2">Fourth Year</span>
           </label>
         </div>
       </div>
