@@ -12,6 +12,8 @@
     "firebase": "^11.10.0",
     "get-stream": "^9.0.1",
     "jspdf": "^3.0.1",
+    "markdown-it": "^14.1.0",
+    "markdown-table": "^3.0.4",
     "next": "15.3.5",
     "pdfkit": "^0.17.1",
     "react": "^19.0.0",

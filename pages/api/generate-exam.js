@@ -23,59 +23,98 @@ export default async function handler(req, res) {
     return `
 You are an expert exam designer tasked with generating a comprehensive and well-structured college-level examination. Please generate an exam based on the following professor-provided details:
 
-• *Program*: ${data.program}
-• *Course Subject*: ${data.course}
-• *Year Level*: ${data.yearLevel}
-• *Semester*: ${data.semester}
-• *Period*: ${data.period}
-• *Number of Items*: ${data.totalItems}
-• *Exam Type*: ${data.breakdown}
-• *Topics/Contents (optional)*: ${data.topics || "Use typical core topics for the course and period."}
-• *Time Limit (optional)*: ${data.timeLimit || "N/A"}
-• *Instructions*: Provide clear and professional instructions for each exam section.
-• *Formatting*: 
-    - Group questions by type (e.g., Part I: Multiple Choice, Part II: Essay/Hands-On).
-    - Use clean, academic formatting and clear numbering.
+• Program: ${data.program}
+• Course Subject: ${data.course}
+• Year Level: ${data.yearLevel}
+• Semester: ${data.semester}
+• Period: ${data.period}
+• Number of Items: ${data.totalItems}
+• Exam Type: ${data.breakdown}
+• Topics/Contents (optional): ${data.topics || "Use typical core topics for the course and period."}
+• Time Limit (optional): ${data.timeLimit || "N/A"}
+• Instructions: Provide clear and professional instructions for each exam section.
+• Formatting:
+    - Group questions by type (e.g., Part I: Multiple Choice, Part II: Essay/Hands-On).
+    - Use clean, academic formatting and clear numbering.
 
 Cognitive Skill Requirement:
-Cover a mix of *Lower-Order Thinking Skills (LOTS)* and *Higher-Order Thinking Skills (HOTS)* based on the *Revised Bloom’s Taxonomy (2001)*:
-- LOTS: Remember, Understand, Apply
-- HOTS: Analyze, Evaluate, Create
+Cover a mix of Lower-Order Thinking Skills (LOTS) and Higher-Order Thinking Skills (HOTS) based on the Revised Bloom’s Taxonomy (2001):
+
+LOTS: Remember, Understand, Apply
+
+HOTS: Analyze, Evaluate, Create
 
 Distribute questions across the Bloom’s levels where appropriate for the course and level.
 
 Output Format Requirements:
-Part I – Multiple Choice (e.g., 40 Items)* - Each question must include:
-  - One correct answer
-  - Three plausible distractors
-  - Choices labeled a), b), c), and d)
-- Do *not* include the answer or Bloom’s level in the question section
 
-Questionnaire Structure for Part I:
-1. (question for item number 1)
-    a. choice a
-    b. choice b
-    c. choice c
-    d. choice d
+Part I – Multiple Choice (or other objective item types)
 
-Part II – Essay/Hands-On (e.g., 10 Items)* - Focus these on higher-order thinking (Evaluate, Create)
-- Each task must be clearly stated but should not include the Bloom’s level in the question itself
+Each question must include:
+  - One correct answer
+  - Three plausible distractors
+  - Choices labeled a), b), c), and d)
 
-Questionnaire Structure for Part I:
-1. (hands-on task for item number 1)
+Do not include the answer or Bloom’s level in the question section.
 
-Answer Key Requirements:
-Place the *Answer Key* after the exam section and include:
-- The correct answer for each question
-- The *Bloom’s Taxonomy level* for each item (e.g., Understand, Apply, Create)
+Structure:
+
+(question for item number 1)
+    a. choice a
+    b. choice b
+    c. choice c
+    d. choice d
+
+Part II – Essay / Hands-On / Case Study / Problem-Solving
+
+Focus these questions on higher-order thinking (Analyze, Evaluate, Create).
+
+Each task must be clearly and comprehensively stated but should not include the Bloom’s level in the question itself.
+
+For every question in this section, a corresponding grading rubric must be generated in the "Answer Key and Grading Guide" section.
+
+Structure:
+
+(hands-on or essay task for item number 1)
+
+Answer Key and Grading Guide Requirements:
+Place this entire section after the main examination questionnaire. Structure it into two clear parts:
+
+Part I - Answer Key for Objective Items:
+
+List the item number, the correct letter choice, and the Bloom’s Taxonomy level.
+
+Example Format:
+
+A (Remember)
+
+C (Apply)
+
+Part II - Grading Rubrics for Subjective Items:
+
+For each Essay, Hands-On, or other subjective question, provide a detailed grading rubric.
+
+Begin by stating the question number and its primary Bloom's Taxonomy level (e.g., Question 1 (Create)).
+
+Each rubric must contain the following components:
+
+Criteria: The specific aspects being assessed (e.g., Content Accuracy, Critical Analysis, Organization, Application of Concepts, Clarity).
+
+Performance Levels: A scale to rate the student's performance (e.g., Excellent, Proficient, Developing, Unsatisfactory or a 4-point scale).
+
+Descriptors: Clear, specific descriptions for each performance level within each criterion. Explain what a student's response must demonstrate to earn that score.
 
 Additional Instructions:
-- Ensure the exam is suitable for the specified program and course level.
-- Make sure to generate the exam in a professional and academic tone, suitable for college-level students.
-- Make sure that the exam is comprehensive and covers the topics relevant to the course and period.
-- Make sure to provide only the questionnaie and the answer key and others as instructed above, without any additional text or explanations.
-- Make sure to not use a markdown formatted content. Format it as plain text.
 
+Ensure the exam is suitable for the specified program and course level.
+
+Make sure to generate the exam in a professional and academic tone, suitable for college-level students.
+
+Make sure that the exam is comprehensive and covers the topics relevant to the course and period.
+
+Make sure to provide only the questionnaire and the answer key/grading guide as instructed above, without any additional text or explanations.
+
+Make sure to not use a markdown formatted content. Format it as plain text.
 `;
   }
 

@@ -36,8 +36,8 @@ export default function ExamForm({ onSubmit, loading }) {
           <option value="" disabled>
             Select Program
           </option>
-          <option value="Bachelor of Science in Computing Studies / Associate in Computer Technologies">
-            Bachelor of Science in Computing Studies / Associate in Computer Technologies
+          <option value="Bachelor of Science in Computer Science / Associate in Computer Technologies">
+            Bachelor of Science in Computer Science / Associate in Computer Technologies
           </option>
           <option value="Bachelor of Science in Hospitality Management">
             Bachelor of Science in Hospitality Management

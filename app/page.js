@@ -1,6 +1,7 @@
 "use client";
 "use client";
 import React, { useState } from "react";
+import ReminderModal from "../components/ReminderModal"; // Import the ReminderModal component
 import ExamForm from "../components/ExamForm";
 import ExamResult from "@/components/ExamResult";
 
@@ -11,6 +12,7 @@ export default function Home() {
   const [exam, setExam] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPdfMsg, setShowPdfMsg] = useState(false);
+  const [showReminder, setShowReminder] = useState(true); // State to control the reminder modal
 
 
 
@@ -60,6 +62,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center py-10 px-2 bg-[#0D2A5B]">
+  <ReminderModal open={showReminder} onClose={() => setShowReminder(false)} /> {/* Render the ReminderModal */}
       <h1 className="title">OLOPSC Exam Maker</h1>
       <div className="card w-full max-w-4xl min-h-[350px] flex items-center justify-center relative">
         {showPdfMsg && (
