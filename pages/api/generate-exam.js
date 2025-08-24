@@ -104,6 +104,12 @@ Performance Levels: A scale to rate the student's performance (e.g., Excellent, 
 
 Descriptors: Clear, specific descriptions for each performance level within each criterion. Explain what a student's response must demonstrate to earn that score.
 
+Make sure that the rubric format is consistent for all subjective questions.
+
+Make sure that it is readable and well-organized, using headings, bullet points, and spacing effectively.
+
+Avoid using complex table structures; use plain text formatting to ensure clarity.
+
 Additional Instructions:
 
 Ensure the exam is suitable for the specified program and course level.
